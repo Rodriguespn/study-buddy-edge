@@ -1,0 +1,20 @@
+{
+  "name": "study-buddy-edge",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/prepare.js",
+    "dev": "supabase functions serve",
+    "deploy": "node scripts/prepare.js && supabase functions deploy study-buddy",
+    "db:push": "supabase db push",
+    "db:reset": "supabase db reset",
+    "test": "vitest --run",
+    "lint": "biome check .",
+    "format": "biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "vitest": "^2.1.8"
+  }
+}
